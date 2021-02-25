@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#386189</color>
+    <color name="colorSecondary">#386189</color>
+    <color name="letras">#a6aba8</color>
+    <color name="fundo_card">#3b3d3c</color>
+    <color name="fundo_card_sec">#4a4d4b</color>
+    <color name="fundo_app">#386189</color>
+    <color name="spark">#989e9a</color>
+
+</resources>

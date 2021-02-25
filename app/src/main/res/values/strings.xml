@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Wert</string>
+    <string name="saldos"><u>SALDOS</u></string>
+    <string name="acoes"><u>AÇÕES</u></string>
+    <string name="minhas_acoes">Minhas ações</string>
+    <string name="com_roi">Com ROI</string>
+    <string name="em_alta">Em alta</string>
+    <string name="investido">Investido</string>
+    <string name="semana">Semana</string>
+    <string name="mes">Mês</string>
+    <string name="ano">Ano</string>
+    <string name="alerta_de_compra">Alerta de Compra</string>
+    <string name="alerta_de_venda">Alerta de Venda</string>
+    <string name="data_da_compra">Data da Compra</string>
+    <string name="perda_ganho">Perda/Ganho (%)</string>
+    <string name="total_investido">Total Investido</string>
+    <string name="preco_da_compra">Preço da Compra</string>
+    <string name="perda_ganho_rs">Perda/Ganho (R$)</string>
+    <string name="saldo_atual">Saldo Atual</string>
+    <string name="quantidade_comprada">Quantidade Comprada</string>
+    <string name="setor">Setor</string>
+    <string name="valor_no_mercado">Valor no Mercado</string>
+    <string name="nova_acao">Nova Ação</string>
+    <string name="ticker">Ticker:</string>
+    <string name="nome_acao">Nome:</string>
+    <string name="inativa">Inativa</string>
+    <string name="ativa">Ativa</string>
+    <string name="nome_da_acao">Nome da ação</string>
+    <string name="qtd_comprada">Qtd. Comprada</string>
+    <string name="n_acoes">Número de ações</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="longo_prazo">Longo Prazo</string>
+    <string name="curto_prazo">Curto Prazo</string>
+    <string name="segmento">Segmento</string>
+    <string name="alertas">Alertas</string>
+</resources>

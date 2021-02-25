@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#386189"
+    tools:context=".InfosAcaoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar_acoes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/fundo_card">
+
+        <TextView
+            android:id="@+id/text_nomeAcao_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/minionpro"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:text="AZUL SA"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/letras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_ticker_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/minionpro"
+            android:text="AZUL4"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/letras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.352">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/info_acoes"
+        android:layout_width="360dp"
+        android:layout_height="305dp"
+        android:layout_marginTop="25dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_acoes">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fundo_card">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="155dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="@color/fundo_card_sec"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/alerta_venda"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.517">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perda_ganho"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/letras"
+                        android:background="@drawable/text_border">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/perda_ganho_p_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="-6,57%"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textColor="#D41B1B">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perda_ganho_rs"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/letras"
+                        android:background="@drawable/text_border">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/perda_ganho_rs_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="-R$ 4,90"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textColor="#D41B1B">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saldo_atual"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/letras"
+                        android:background="@drawable/text_border">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/saldo_atual_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="R$ 198,50"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/letras"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="155dp"
+                android:layout_height="160dp"
+                app:cardBackgroundColor="@color/fundo_card_sec"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toTopOf="@id/alerta_venda"
+                app:layout_constraintStart_toEndOf="@id/cardView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantidade_comprada"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/letras"
+                        android:background="@drawable/text_border">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/qtd_comprada_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="37"
+                        android:textSize="20sp"
+                        android:textColor="@color/letras"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/preco_da_compra"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/minionpro"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/letras"
+                        android:background="@drawable/text_border">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/preco_compra_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="R$ 19,02"
+                        android:textSize="20sp"
+                        android:textColor="@color/letras"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/data_da_compra"
+                        android:textAlignment="center"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/letras"
+                        android:background="@drawable/text_border">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/data_compra_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="12/01/2020"
+                        android:textSize="20sp"
+                        android:textColor="@color/letras"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/minionpro"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/alerta_venda"
+                android:layout_width="330dp"
+                android:layout_height="45dp"
+                app:cardBackgroundColor="@color/fundo_card_sec"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@id/total_investido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alerta_de_venda"
+                    android:fontFamily="@font/minionpro"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/letras">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/alerta_venda_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 18,80"
+                    android:fontFamily="@font/minionpro"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="85dp"
+                    android:textColor="@color/letras">
+                </TextView>
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/alterar"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:alpha="0.4"
+                        android:background="?attr/selectableItemBackgroundBorderless">
+
+                    </ImageButton>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/total_investido"
+                android:layout_width="330dp"
+                android:layout_height="45dp"
+                app:cardBackgroundColor="@color/fundo_card_sec"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_investido"
+                        android:fontFamily="@font/minionpro"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/letras">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/total_investido_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$ 188,34"
+                        android:fontFamily="@font/minionpro"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="92dp"
+                        android:textColor="@color/letras">
+                    </TextView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/graficos"
+        android:layout_width="360dp"
+        android:layout_height="245dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_acoes"
+        app:layout_constraintVertical_bias="0.254">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fundo_card_sec">
+
+            <TextView
+                android:id="@+id/text_semana"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_border_fcard"
+                android:padding="5dp"
+                android:fontFamily="@font/minionpro"
+                android:textStyle="bold"
+                android:text="@string/semana"
+                android:textSize="15sp"
+                android:textColor="@color/letras"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <com.robinhood.spark.SparkView
+                android:id="@+id/sparkWeek"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/text_semana"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spark_lineColor="@color/spark"
+                android:background="@drawable/text_border_fcards">
+            </com.robinhood.spark.SparkView>
+
+            <TextView
+                android:id="@+id/text_mes"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_border_fcard"
+                android:padding="5dp"
+                android:fontFamily="@font/minionpro"
+                android:textStyle="bold"
+                android:text="@string/mes"
+                android:textSize="15sp"
+                android:textColor="@color/letras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <com.robinhood.spark.SparkView
+                android:id="@+id/sparkMonth"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_mes"
+                app:spark_lineColor="@color/spark"
+                android:background="@drawable/text_border_fcards">
+            </com.robinhood.spark.SparkView>
+
+            <TextView
+                android:id="@+id/text_meses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_border_fcard"
+                android:padding="5dp"
+                android:fontFamily="@font/minionpro"
+                android:textStyle="bold"
+                android:text="3 Meses"
+                android:textSize="15sp"
+                android:textColor="@color/letras"
+                app:layout_constraintTop_toBottomOf="@id/sparkWeek"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+            <com.robinhood.spark.SparkView
+                android:id="@+id/sparkMeses"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:layout_constraintTop_toBottomOf="@id/text_meses"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:spark_lineColor="@color/spark"
+                android:background="@color/fundo_card_sec">
+            </com.robinhood.spark.SparkView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottomnav_bg"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

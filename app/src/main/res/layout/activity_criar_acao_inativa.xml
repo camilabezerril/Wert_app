@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CriarAcaoActivity"
+    android:background="#386189">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar_nova_acao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/fundo_card">
+
+        <TextView
+            android:id="@+id/text_nova_acao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/minionpro"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/nova_acao"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/letras">
+        </TextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ticker"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_nova_acao"
+        app:cardBackgroundColor="@color/fundo_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/minionpro"
+                android:text="@string/ticker"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/letras"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.181">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_ticker"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.304"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                android:textColor="@color/letras">
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <TextView
+                android:id="@+id/inativa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="108dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/minionpro"
+                android:text="@string/inativa"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/letras">
+            </TextView>
+
+            <TextView
+                android:id="@+id/ativa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/minionpro"
+                android:text="@string/ativa"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.426"
+                app:layout_constraintStart_toEndOf="@+id/switch_atividade"
+                android:textColor="@color/letras">
+            </TextView>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_atividade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/inativa">
+
+
+            </com.google.android.material.switchmaterial.SwitchMaterial>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="350dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="40dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_ticker"
+        app:cardBackgroundColor="@color/fundo_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/longo_prazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/minionpro"
+                android:text="@string/longo_prazo"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.456"
+                app:layout_constraintStart_toEndOf="@+id/switch_prazo"
+                android:textColor="@color/letras">
+            </TextView>
+
+            <TextView
+                android:id="@+id/curto_prazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/minionpro"
+                android:text="@string/curto_prazo"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/letras">
+            </TextView>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_prazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/curto_prazo">
+            </com.google.android.material.switchmaterial.SwitchMaterial>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nome_acao"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/nome_da_acao"
+                android:inputType="text"
+                android:maxLength="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/letras">
+            </com.google.android.material.textfield.TextInputEditText>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/alerta_compra"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/alerta_de_compra"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nome_acao"
+                app:layout_constraintVertical_bias="0.0"
+                android:textColor="@color/letras">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.183"
+        android:text="@string/cadastrar"
+        android:fontFamily="@font/minionpro"
+        android:textStyle="bold"
+        android:textColor="@color/letras"
+        android:background="@drawable/btn_shape">
+    </Button>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottomnav_bg"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

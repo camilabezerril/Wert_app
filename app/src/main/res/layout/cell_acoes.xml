@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/fundo_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nome_alerta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/text_border"
+                android:fontFamily="@font/minionpro"
+                android:padding="5dp"
+                android:text="Azul SA"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/letras"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/atividade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/minionpro"
+                android:text="Ativo"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/letras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/nome_alerta"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/prazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/minionpro"
+                android:text="Longo Prazo"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/letras"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintHorizontal_bias="0.009"
+                app:layout_constraintStart_toEndOf="@+id/nome_alerta"
+                app:layout_constraintTop_toBottomOf="@id/atividade">
+            </TextView>
+
+            <TextView
+                android:id="@+id/text_alerta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/minionpro"
+                android:text="Valor Atual: "
+                android:textSize="15sp"
+                android:textColor="@color/letras"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/nome_alerta"
+                app:layout_constraintTop_toBottomOf="@+id/nome_alerta">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/warning"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/warning"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.905"
+                app:layout_constraintStart_toEndOf="@id/valor2"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/valor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/minionpro"
+                android:text="R$ 19,87"
+                android:textSize="15dp"
+                android:textColor="#318954"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/text_alerta"
+                app:layout_constraintTop_toBottomOf="@+id/nome_alerta">
+            </TextView>
+
+            <TextView
+                android:id="@+id/valor_anterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/minionpro"
+                android:text="Valor Anterior: "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/letras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/nome_alerta"
+                app:layout_constraintTop_toBottomOf="@+id/text_alerta">
+            </TextView>
+
+            <TextView
+                android:id="@+id/valor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/minionpro"
+                android:text="R$ 19,87"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/letras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/valor_anterior"
+                app:layout_constraintTop_toBottomOf="@+id/valor1">
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

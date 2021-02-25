@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <solid android:color="@color/fundo_card_sec" />
+    <stroke android:width="1dip" android:color="#386189"/>
+</shape>

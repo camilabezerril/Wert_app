@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#386189"
+    tools:context=".MainActivity">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/birdlogo"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:translationX="-60dp"
+        android:translationY="200dp"
+        app:srcCompat="@drawable/logo_semfundo" />
+
+    <TextView
+        android:id="@+id/text_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/minionpro"
+        android:text="WERT"
+        android:textColor="#1A1D20"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:translationX="13dp"
+        android:translationY="338dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
