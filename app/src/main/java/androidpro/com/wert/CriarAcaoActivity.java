@@ -85,12 +85,12 @@ public class CriarAcaoActivity extends AppCompatActivity {
                     }
 
                     try {
-                        AcaoAtiva novaAcao = new AcaoAtiva(ticker, nomeAcao, precoCompra, prazo, qtdComprada, alertaVenda);
+                        DatabaseReference acaoAtivaRef = FirebaseDatabase.getInstance().getReference("AcaoAtiva");
+                        String key = acaoAtivaRef.push().getKey();
 
-                        DatabaseReference acaoAtivaRef = FirebaseDatabase
-                                .getInstance()
-                                .getReference("AcaoAtiva");
-                        acaoAtivaRef.push().setValue(novaAcao);
+                        AcaoAtiva novaAcao = new AcaoAtiva(key, ticker, nomeAcao, precoCompra, prazo, qtdComprada, alertaVenda);
+
+                        acaoAtivaRef.child(key).setValue(novaAcao);
 
                     } catch (RuntimeException e){
                         Toast toast = Toast.makeText(CriarAcaoActivity.this, "Ticker inválido", Toast.LENGTH_LONG);
@@ -114,12 +114,12 @@ public class CriarAcaoActivity extends AppCompatActivity {
                     }
 
                     try {
-                        AcaoInativa novaAcao = new AcaoInativa(ticker, nomeAcao, alertaCompra, prazo);
+                        DatabaseReference acaoInativaRef = FirebaseDatabase.getInstance().getReference("AcaoInativa");
+                        String key = acaoInativaRef.push().getKey();
 
-                        DatabaseReference acaoInativaRef = FirebaseDatabase
-                                .getInstance()
-                                .getReference("AcaoInativa");
-                        acaoInativaRef.push().setValue(novaAcao);
+                        AcaoInativa novaAcao = new AcaoInativa(key, ticker, nomeAcao, alertaCompra, prazo);
+
+                        acaoInativaRef.child(key).setValue(novaAcao);
 
                     } catch (RuntimeException e){
                         Toast toast = Toast.makeText(CriarAcaoActivity.this, "Ticker inválido", Toast.LENGTH_LONG);

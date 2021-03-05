@@ -149,50 +149,16 @@ public class UpdateAcao {
         }
     }
 
-    private static void sendToFirebase(AcaoAtiva acaoNew){
-        acoesFirebase = FirebaseDatabase.getInstance().getReference().child("AcaoAtiva");
+    private static void sendToFirebase(AcaoAtiva acaoUpdated){
+        acoesFirebase = FirebaseDatabase.getInstance().getReference("AcaoAtiva");
 
-        acoesFirebase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot acaoOld: dataSnapshot.getChildren()) { //Iterando em acao ativa
-                    AcaoAtiva novaAcao = acaoOld.getValue(AcaoAtiva.class);
-
-                    if (novaAcao.getNomeAcao().equals(acaoNew.getNomeAcao())) {
-                        acoesFirebase.child(acaoOld.getKey()).removeValue();
-                        acoesFirebase.push().setValue(acaoNew);
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        acoesFirebase.child(acaoUpdated.getUid()).setValue(acaoUpdated);
     }
 
-    private static void sendToFirebase(AcaoInativa acaoNew){
+    private static void sendToFirebase(AcaoInativa acaoUpdated){
         acoesFirebase = FirebaseDatabase.getInstance().getReference().child("AcaoInativa");
 
-        acoesFirebase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot acaoOld: dataSnapshot.getChildren()) { //Iterando em acao ativa
-                    AcaoInativa novaAcao = acaoOld.getValue(AcaoInativa.class);
-
-                    if (novaAcao.getNomeAcao().equals(acaoNew.getNomeAcao())) {
-                        acoesFirebase.child(acaoOld.getKey()).removeValue();
-                        acoesFirebase.push().setValue(acaoNew);
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        acoesFirebase.child(acaoUpdated.getUid()).setValue(acaoUpdated);
     }
 }
 

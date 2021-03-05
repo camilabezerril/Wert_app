@@ -4,6 +4,7 @@ import org.json.JSONObject;
 import java.util.Map;
 
 public class AcaoInativa {
+    private String uid;
     private String ticker;
     private String nomeAcao;
     private String segmento;
@@ -19,7 +20,8 @@ public class AcaoInativa {
 
     public AcaoInativa(){ }
 
-    public AcaoInativa(String ticker, String nomeAcao, String alertaCompra, boolean prazo) {
+    public AcaoInativa(String uid, String ticker, String nomeAcao, String alertaCompra, boolean prazo) {
+        this.uid = uid;
         this.ticker = ticker;
         this.nomeAcao = nomeAcao;
         this.prazo = prazo;
@@ -29,6 +31,14 @@ public class AcaoInativa {
             throw new RuntimeException();
 
         UpdateAcao.updateDynamicData(this);
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getTicker() {

@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Map;
 
 public class AcaoAtiva {
+    private String uid;
     private String ticker;
     private String nomeAcao;
     private String segmento;
@@ -28,9 +29,10 @@ public class AcaoAtiva {
 
     public AcaoAtiva(){ }
 
-    public AcaoAtiva (String ticker, String nomeAcao, String precoCompra,
+    public AcaoAtiva (String uid, String ticker, String nomeAcao, String precoCompra,
                       boolean prazo, String qtdComprada, String alertaVenda) {
 
+        this.uid = uid;
         this.ticker = ticker;
         this.nomeAcao = nomeAcao;
         this.prazo = prazo;
@@ -42,6 +44,14 @@ public class AcaoAtiva {
             throw new RuntimeException();
 
         UpdateAcao.updateDynamicData(this);
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getTicker() {
